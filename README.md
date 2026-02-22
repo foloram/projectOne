@@ -88,3 +88,7 @@ Works with all modern browsers that support ES6 JavaScript and CSS.
 - The project uses vanilla JavaScript with no external dependencies
 - All files are served with standard HTTP
 - Images must be present for diagrams to display correctly
+
+## Repository
+
+https://github.com/foloram/projectOne

@@ -33,8 +33,8 @@ A demonstration project comparing Client-Side Rendering (CSR) and Server-Side Re
    ```
 
 3. Open your browser and visit:
-   - **CSR Demo**: `http://127.0.0.1:5500/rendering/csr.html`
-   - **SSR Demo**: `http://127.0.0.1:5500/rendering/ssr.html`
+   - **CSR Demo**: `http://127.0.0.1:5500/csr.html`
+   - **SSR Demo**: `http://127.0.0.1:5500/ssr.html`
 
 ### Option 2: Using Live Server (VS Code Extension)
 

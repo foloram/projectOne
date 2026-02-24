@@ -15,17 +15,17 @@ app.innerHTML = `
       Click the button below to navigate to another page or website.
       It allows you to switch between different sites easily.
     </p>
-    <a href="/rendering/ssr.html" class="button">Click me</a>
+    <a href="/ssr.html" class="button">Click me</a>
   </div>
 
   <div class="images-wrapper">
     <figure class="image-box">
-      <img src="/rendering/client (1).png" alt="Server-side rendering" />
+      <img src="/client (1).png" alt="Server-side rendering" />
       <figcaption>Server-Side Rendering</figcaption>
     </figure>
 
     <figure class="image-box">
-      <img src="/rendering/client.png" alt="Client-side rendering" />
+      <img src="/client.png" alt="Client-side rendering" />
       <figcaption>Client-Side Rendering</figcaption>
     </figure>
   </div>

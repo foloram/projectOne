@@ -5,7 +5,7 @@ A demonstration project comparing Client-Side Rendering (CSR) and Server-Side Re
 ## Project Structure
 
 ```
-rendering/
+
 ├── csr.html          # Client-Side Rendering example
 ├── ssr.html          # Server-Side Rendering example
 ├── main.js           # JavaScript for dynamic content rendering
@@ -18,25 +18,7 @@ rendering/
 
 ## How to Run
 
-### Option 1: Using Python's Built-in HTTP Server
-
-1. Navigate to the rendering directory:
-
-   ```powershell
-   cd D:\projectOne\rendering
-   ```
-
-2. Start the HTTP server:
-
-   ```powershell
-   python -m http.server 8000
-   ```
-
-3. Open your browser and visit:
-   - **CSR Demo**: `http://localhost:8000/csr.html`
-   - **SSR Demo**: `http://localhost:8000/ssr.html`
-
-### Option 2: Using Node.js and http-server
+### Option 1: Using Node.js and http-server
 
 1. Install http-server globally (if not already installed):
 
@@ -44,23 +26,17 @@ rendering/
    npm install -g http-server
    ```
 
-2. Navigate to the rendering directory:
+2. Start the server:
 
    ```powershell
-   cd D:\projectOne\rendering
+   http-server -p 5500
    ```
 
-3. Start the server:
+3. Open your browser and visit:
+   - **CSR Demo**: `http://127.0.0.1:5500/rendering/csr.html`
+   - **SSR Demo**: `http://127.0.0.1:5500/rendering/ssr.html`
 
-   ```powershell
-   http-server -p 8000
-   ```
-
-4. Open your browser and visit:
-   - **CSR Demo**: `http://localhost:8000/csr.html`
-   - **SSR Demo**: `http://localhost:8000/ssr.html`
-
-### Option 3: Using Live Server (VS Code Extension)
+### Option 2: Using Live Server (VS Code Extension)
 
 1. Install the "Live Server" extension in VS Code
 2. Right-click on `csr.html` or `ssr.html` in the rendering folder
@@ -77,7 +53,7 @@ rendering/
 ## Requirements
 
 - A web browser (Chrome, Firefox, Safari, Edge, etc.)
-- Optional: Python 3.x, Node.js, or VS Code with Live Server extension
+- Node.js with http-server, or VS Code with Live Server extension
 
 ## Browser Support
 
@@ -92,3 +68,31 @@ Works with all modern browsers that support ES6 JavaScript and CSS.
 ## Repository
 
 https://github.com/foloram/projectOne
+
+## Analysis
+
+This project compares Server-Side Rendering (SSR) and Client-Side Rendering (CSR) by implementing the same webpage using two different rendering approaches.
+
+## Performance
+
+In the SSR version, all main content is included in the initial HTML. This allows the browser to display content immediately, resulting in a faster time to first visible content and better perceived loading speed.
+
+In the CSR version, the HTML initially contains only an empty container. The browser must load and execute JavaScript before rendering the content. This delays the first visible content and may make the page feel slower.
+
+CSR also fully depends on JavaScript execution. If JavaScript is slow, blocked, or fails, the content will not appear.
+
+## SEO
+
+In SSR, all important content is available in the initial HTML. Search engines can easily crawl and index the page because the content is directly accessible.
+
+In CSR, the initial HTML does not contain the main content. Search engines must execute JavaScript to access it, which may reduce SEO effectiveness or delay indexing.
+
+Metadata such as the page title is immediately visible in SSR, while CSR may require additional handling to ensure proper metadata visibility.
+
+## User Experience
+
+SSR provides immediate visible content when the page loads, improving the overall user experience.
+
+CSR may show a blank screen until JavaScript finishes rendering the content.
+
+SSR works even if JavaScript is disabled or fails, while CSR completely depends on JavaScript. If JavaScript fails or loads slowly, the page may appear empty or broken.
